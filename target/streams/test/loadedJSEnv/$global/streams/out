@@ -1,0 +1,13 @@
+[0m[[0mdebug[0m] [0mGenerating LinkingUnit for JSEnv RhinoJSEnv[0m
+[0m[[0mdebug[0m] [0mLinker: Compute reachability: 5149903 us[0m
+[0m[[0mdebug[0m] [0mLinker: Assemble LinkedClasses: 2782217 us[0m
+[0m[[0mdebug[0m] [0mBasic Linking: 8038630 us[0m
+[0m[[0mdebug[0m] [0mInc. optimizer: Batch mode: true[0m
+[0m[[0mdebug[0m] [0mInc. optimizer: Incremental part: 842663 us[0m
+[0m[[0mdebug[0m] [0mInc. optimizer: Optimizing 9026 methods.[0m
+[0m[[0mdebug[0m] [0mInc. optimizer: Optimizer part: 9262242 us[0m
+[0m[[0mdebug[0m] [0mInc. optimizer: 10237209 us[0m
+[0m[[0mdebug[0m] [0mRefiner: Compute reachability: 3821739 us[0m
+[0m[[0mdebug[0m] [0mRefiner: Assemble LinkedClasses: 147556 us[0m
+[0m[[0mdebug[0m] [0mRefiner: 3971319 us[0m
+[0m[[0mdebug[0m] [0mLoading JSEnv with LinkingUnit[0m

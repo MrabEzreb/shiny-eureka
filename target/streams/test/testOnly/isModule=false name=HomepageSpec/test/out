@@ -1,0 +1,11 @@
+[0m[[0minfo[0m] [0m[32mHomepageSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mScenario: User loads the webpage[0m[0m
+[0m[[0minfo[0m] [0m[32m  Given An empty page [0m[0m
+[0m[[0minfo[0m] [0m[32m  When Javascript runs [0m[0m
+[0m[[0minfo[0m] [0m[32m  Then there should be Helloworld [0m[0m
+[0m[[0minfo[0m] [0m[32m  And there should be a button [0m[0m
+[0m[[0minfo[0m] [0m[32mFeature: Big Red Button[0m[0m
+[0m[[0minfo[0m] [0m[32m  Scenario: User Presses Big Red Button[0m[0m
+[0m[[0minfo[0m] [0m[32m    Given There is no booming [0m[0m
+[0m[[0minfo[0m] [0m[32m    When The button is pressed [0m[0m
+[0m[[0minfo[0m] [0m[32m    Then It should make you go boom [0m[0m
