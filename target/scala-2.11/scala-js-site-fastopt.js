@@ -3912,7 +3912,8 @@ $e.mrabezreb.scalajsthingy = ($e.mrabezreb.scalajsthingy || {});
 $e.mrabezreb.scalajsthingy.Main = $m_Lmrabezreb_scalajsthingy_Main$;
 /** @constructor */
 function $c_Lmrabezreb_scalajsthingy_dungeonsandlizards_GamePage$() {
-  $c_O.call(this)
+  $c_O.call(this);
+  this.max1$1 = 0.0
 }
 $c_Lmrabezreb_scalajsthingy_dungeonsandlizards_GamePage$.prototype = new $h_O();
 $c_Lmrabezreb_scalajsthingy_dungeonsandlizards_GamePage$.prototype.constructor = $c_Lmrabezreb_scalajsthingy_dungeonsandlizards_GamePage$;
@@ -3921,19 +3922,93 @@ function $h_Lmrabezreb_scalajsthingy_dungeonsandlizards_GamePage$() {
   /*<skip>*/
 }
 $h_Lmrabezreb_scalajsthingy_dungeonsandlizards_GamePage$.prototype = $c_Lmrabezreb_scalajsthingy_dungeonsandlizards_GamePage$.prototype;
+$c_Lmrabezreb_scalajsthingy_dungeonsandlizards_GamePage$.prototype.removeLoadingBar__V = (function() {
+  (0, $m_Lorg_scalajs_jquery_package$().jQuery$1)("#cover123").fadeTo(2000, 0.0, (function() {
+    return (0, $m_Lorg_scalajs_jquery_package$().jQuery$1)("#cover123").remove()
+  }))
+});
 $c_Lmrabezreb_scalajsthingy_dungeonsandlizards_GamePage$.prototype.init___ = (function() {
+  this.max1$1 = (-1.0);
   return this
+});
+$c_Lmrabezreb_scalajsthingy_dungeonsandlizards_GamePage$.prototype.$$js$exported$meth$updateLoadingBar__I__T__O = (function(progress, message) {
+  this.updateLoadingBar__I__T__V(progress, message)
+});
+$c_Lmrabezreb_scalajsthingy_dungeonsandlizards_GamePage$.prototype.updateLoadingBar__I__T__V = (function(progress, message) {
+  var jsx$1 = (0, $m_Lorg_scalajs_jquery_package$().jQuery$1)("#mainloading");
+  var s = ($fround((100.0 * $fround(($fround(progress) / this.max1$1)))) + "%");
+  jsx$1.css("width", s);
+  (0, $m_Lorg_scalajs_jquery_package$().jQuery$1)("#mainloadingp").html(message)
+});
+$c_Lmrabezreb_scalajsthingy_dungeonsandlizards_GamePage$.prototype.$$js$exported$meth$removeLoadingBar__O = (function() {
+  this.removeLoadingBar__V()
 });
 $c_Lmrabezreb_scalajsthingy_dungeonsandlizards_GamePage$.prototype.main__V = (function() {
   (0, $m_Lorg_scalajs_jquery_package$().jQuery$1)((function() {
-    $m_Lmrabezreb_scalajsthingy_Bootstrap$().apply__V()
+    $m_Lmrabezreb_scalajsthingy_dungeonsandlizards_GamePage$().setupUI__V()
   }))
+});
+$c_Lmrabezreb_scalajsthingy_dungeonsandlizards_GamePage$.prototype.setupUI__V = (function() {
+  $m_Lmrabezreb_scalajsthingy_Bootstrap$().apply__V();
+  (0, $m_Lorg_scalajs_jquery_package$().jQuery$1)("body").append($as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().h1__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([($m_Lscalatags_JsDom$all$(), new $c_Lscalatags_JsDom$StringFrag().init___T("H1 HIELLO WORLDOIAN"))])).render__Lorg_scalajs_dom_raw_Element());
+  this.createLoadingBar__F__V(10.0);
+  var i = 10;
+  while ((i > 0)) {
+    var jsx$1 = (0, $m_Lorg_scalajs_jquery_package$().jQuery$1)("body");
+    var s = (((((("<script>window.setTimeout(function() {mrabezreb.scalajsthingy.dungeonsandlizards.GamePage().updateLoadingBar(" + i) + ", \"message 1234 ") + i) + "\")}, ") + $imul(1000, i)) + ")</script>");
+    jsx$1.append(s);
+    i = (((-1) + i) | 0)
+  };
+  (0, $m_Lorg_scalajs_jquery_package$().jQuery$1)("body").append("<script>window.setTimeout(function() {mrabezreb.scalajsthingy.dungeonsandlizards.GamePage().removeLoadingBar()}, 15000)</script>")
+});
+$c_Lmrabezreb_scalajsthingy_dungeonsandlizards_GamePage$.prototype.createLoadingBar__F__V = (function(max) {
+  var p123 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().p__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().style__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("font-size: 50px; height: 50px; position: absolute; bottom: 55%; text-align: center; width: 100%;", $m_Lscalatags_JsDom$all$().stringAttr$1), $m_Lscalatags_JsDom$all$().id__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("mainloadingp", $m_Lscalatags_JsDom$all$().stringAttr$1)])).apply__sc_Seq__Lscalatags_JsDom$TypedTag($m_sci_Nil$());
+  var jsx$8 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().div__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().cls__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("progress", $m_Lscalatags_JsDom$all$().stringAttr$1), $m_Lscalatags_JsDom$all$().style__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("left: 15%; width: 70%; height: 50px; position: absolute; top: 50%", $m_Lscalatags_JsDom$all$().stringAttr$1)]));
+  var jsx$7 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().div__Lscalatags_generic_TypedTag());
+  var jsx$6 = $m_Lscalatags_JsDom$all$().cls__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("progress-bar progress-bar-info", $m_Lscalatags_JsDom$all$().stringAttr$1);
+  var jsx$5 = $m_Lscalatags_JsDom$all$().id__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("mainloading", $m_Lscalatags_JsDom$all$().stringAttr$1);
+  var jsx$4 = $m_Lscalatags_JsDom$all$().style__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("line-height: 50px; font-size: 40px; color: black;", $m_Lscalatags_JsDom$all$().stringAttr$1);
+  var this$3 = $m_Lscalatags_JsDom$all$();
+  $m_Lscalatags_JsDom$all$();
+  var ns = null;
+  $m_Lscalatags_JsDom$all$();
+  var raw = false;
+  var jsx$3 = $s_Lscalatags_generic_Util$class__attr__Lscalatags_generic_Util__T__Lscalatags_generic_Namespace__Z__Lscalatags_generic_Attr(this$3, "role", ns, raw).$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("progressbar", $m_Lscalatags_JsDom$all$().stringAttr$1);
+  var this$6 = $m_Lscalatags_JsDom$all$();
+  $m_Lscalatags_JsDom$all$();
+  var ns$1 = null;
+  $m_Lscalatags_JsDom$all$();
+  var raw$1 = false;
+  var jsx$2 = $s_Lscalatags_generic_Util$class__attr__Lscalatags_generic_Util__T__Lscalatags_generic_Namespace__Z__Lscalatags_generic_Attr(this$6, "aria-valuenow", ns$1, raw$1).$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("0", $m_Lscalatags_JsDom$all$().stringAttr$1);
+  var this$9 = $m_Lscalatags_JsDom$all$();
+  $m_Lscalatags_JsDom$all$();
+  var ns$2 = null;
+  $m_Lscalatags_JsDom$all$();
+  var raw$2 = false;
+  var jsx$1 = $s_Lscalatags_generic_Util$class__attr__Lscalatags_generic_Util__T__Lscalatags_generic_Namespace__Z__Lscalatags_generic_Attr(this$9, "aria-valuemin", ns$2, raw$2).$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("0", $m_Lscalatags_JsDom$all$().stringAttr$1);
+  var this$12 = $m_Lscalatags_JsDom$all$();
+  $m_Lscalatags_JsDom$all$();
+  var ns$3 = null;
+  $m_Lscalatags_JsDom$all$();
+  var raw$3 = false;
+  var loadingBar = jsx$8.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$7.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$6, jsx$5, jsx$4, jsx$3, jsx$2, jsx$1, $s_Lscalatags_generic_Util$class__attr__Lscalatags_generic_Util__T__Lscalatags_generic_Namespace__Z__Lscalatags_generic_Attr(this$12, "aria-valuemax", ns$3, raw$3).$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair(("" + max), $m_Lscalatags_JsDom$all$().stringAttr$1)])).apply__sc_Seq__Lscalatags_JsDom$TypedTag($m_sci_Nil$())]));
+  var cover = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().div__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().style__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("position: absolute; width: 100%; height: 100%; background: white;", $m_Lscalatags_JsDom$all$().stringAttr$1), $m_Lscalatags_JsDom$all$().id__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("cover123", $m_Lscalatags_JsDom$all$().stringAttr$1)])).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([p123, loadingBar]));
+  (0, $m_Lorg_scalajs_jquery_package$().jQuery$1)("body").prepend(cover.render__Lorg_scalajs_dom_raw_Element());
+  this.max1$1 = max
 });
 $c_Lmrabezreb_scalajsthingy_dungeonsandlizards_GamePage$.prototype.$$js$exported$meth$main__O = (function() {
   this.main__V()
 });
 $c_Lmrabezreb_scalajsthingy_dungeonsandlizards_GamePage$.prototype.main = (function() {
   return this.$$js$exported$meth$main__O()
+});
+$c_Lmrabezreb_scalajsthingy_dungeonsandlizards_GamePage$.prototype.removeLoadingBar = (function() {
+  return this.$$js$exported$meth$removeLoadingBar__O()
+});
+$c_Lmrabezreb_scalajsthingy_dungeonsandlizards_GamePage$.prototype.updateLoadingBar = (function(arg$1, arg$2) {
+  var prep0 = $uI(arg$1);
+  var prep1 = $as_T(arg$2);
+  return this.$$js$exported$meth$updateLoadingBar__I__T__O(prep0, prep1)
 });
 var $d_Lmrabezreb_scalajsthingy_dungeonsandlizards_GamePage$ = new $TypeData().initClass({
   Lmrabezreb_scalajsthingy_dungeonsandlizards_GamePage$: 0
@@ -11812,6 +11887,19 @@ $c_Lscalatags_JsDom$all$.prototype.init___ = (function() {
   $s_Lscalatags_JsDom$Aggregate$class__$$init$__Lscalatags_JsDom$Aggregate__V(this);
   return this
 });
+$c_Lscalatags_JsDom$all$.prototype.h1$lzycompute__p1__Lscalatags_generic_TypedTag = (function() {
+  var b = this.bitmap$0$1;
+  var lo = (128 & b.lo$2);
+  if ((lo === 0)) {
+    var ns = $m_Lscalatags_generic_Namespace$().htmlNamespaceConfig$1;
+    this.h1$1 = $s_Lscalatags_jsdom_TagFactory$class__typedTag__Lscalatags_jsdom_TagFactory__T__Z__Lscalatags_generic_Namespace__Lscalatags_generic_TypedTag(this, "h1", false, ns);
+    var b$1 = this.bitmap$0$1;
+    var lo$1 = (128 | b$1.lo$2);
+    var hi = b$1.hi$2;
+    this.bitmap$0$1 = new $c_sjsr_RuntimeLong().init___I__I(lo$1, hi)
+  };
+  return this.h1$1
+});
 $c_Lscalatags_JsDom$all$.prototype.a__Lscalatags_generic_TypedTag = (function() {
   var b = this.bitmap$0$1;
   var lo = (268435456 & b.lo$2);
@@ -11841,6 +11929,15 @@ $c_Lscalatags_JsDom$all$.prototype.class$lzycompute__p1__Lscalatags_generic_Attr
     this.bitmap$4$1 = new $c_sjsr_RuntimeLong().init___I__I(lo$1, hi)
   };
   return this.class$1
+});
+$c_Lscalatags_JsDom$all$.prototype.h1__Lscalatags_generic_TypedTag = (function() {
+  var b = this.bitmap$0$1;
+  var lo = (128 & b.lo$2);
+  if ((lo === 0)) {
+    return this.h1$lzycompute__p1__Lscalatags_generic_TypedTag()
+  } else {
+    return this.h1$1
+  }
 });
 $c_Lscalatags_JsDom$all$.prototype.id$lzycompute__p1__Lscalatags_generic_Attr = (function() {
   var b = this.bitmap$4$1;
@@ -11890,6 +11987,15 @@ $c_Lscalatags_JsDom$all$.prototype.onclick__Lscalatags_generic_Attr = (function(
     return this.onclick$1
   }
 });
+$c_Lscalatags_JsDom$all$.prototype.div__Lscalatags_generic_TypedTag = (function() {
+  var b = this.bitmap$0$1;
+  var lo = (134217728 & b.lo$2);
+  if ((lo === 0)) {
+    return this.div$lzycompute__p1__Lscalatags_generic_TypedTag()
+  } else {
+    return this.div$1
+  }
+});
 $c_Lscalatags_JsDom$all$.prototype.a$lzycompute__p1__Lscalatags_generic_TypedTag = (function() {
   var b = this.bitmap$0$1;
   var lo = (268435456 & b.lo$2);
@@ -11902,6 +12008,19 @@ $c_Lscalatags_JsDom$all$.prototype.a$lzycompute__p1__Lscalatags_generic_TypedTag
     this.bitmap$0$1 = new $c_sjsr_RuntimeLong().init___I__I(lo$1, hi)
   };
   return this.a$1
+});
+$c_Lscalatags_JsDom$all$.prototype.div$lzycompute__p1__Lscalatags_generic_TypedTag = (function() {
+  var b = this.bitmap$0$1;
+  var lo = (134217728 & b.lo$2);
+  if ((lo === 0)) {
+    var ns = $m_Lscalatags_generic_Namespace$().htmlNamespaceConfig$1;
+    this.div$1 = $s_Lscalatags_jsdom_TagFactory$class__typedTag__Lscalatags_jsdom_TagFactory__T__Z__Lscalatags_generic_Namespace__Lscalatags_generic_TypedTag(this, "div", false, ns);
+    var b$1 = this.bitmap$0$1;
+    var lo$1 = (134217728 | b$1.lo$2);
+    var hi = b$1.hi$2;
+    this.bitmap$0$1 = new $c_sjsr_RuntimeLong().init___I__I(lo$1, hi)
+  };
+  return this.div$1
 });
 $c_Lscalatags_JsDom$all$.prototype.onclick$lzycompute__p1__Lscalatags_generic_Attr = (function() {
   var b = this.bitmap$3$1;
